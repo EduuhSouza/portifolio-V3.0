@@ -1,4 +1,4 @@
-# Portfólio Versão 3.0
+# Portifólio Versão 3.0
 
 Bem-vindo(a) ao meu novo **portfólio com temática Cyberpunk**, inspirado na estética futurista, urbana e tecnológica.
 Este projeto nasce com o objetivo de unir **design impactante**, **interatividade** e **experiências visuais imersivas**, explorando conceitos modernos de front-end e narrativa visual.
@@ -7,7 +7,7 @@ Este projeto nasce com o objetivo de unir **design impactante**, **interatividad
 
 ## Conceito
 
-O portfólio segue uma identidade inspirada no jogo **Cyberpunk 2077**, com foco em:
+O portifólio segue uma identidade inspirada no jogo **Cyberpunk 2077**, com foco em:
 - Ambiente
 - Interfaces fluidas
 - Sensação de profundidade e movimento
