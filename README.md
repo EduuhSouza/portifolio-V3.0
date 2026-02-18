@@ -27,7 +27,7 @@ A proposta é criar uma experiência que vá além de um site estático, funcion
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 ### Versão Inicial
 - **HTML5**
