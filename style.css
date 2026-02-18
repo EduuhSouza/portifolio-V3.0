@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+:root {
+  /* Fundo */
+  --cor-fundo-principal: #0f0b0e;
+
+  /* scan  */
+  --cor-scan-principal: #f24a3c;
+  --cor-scan-secundario: #942d2a;
+
+  /* Ciano – informação ativa */
+  --cor-info-ativa: #5cf2f2;
+
+  /* Texto */
+  --cor-texto-principal: #d9d9d9;
+  --cor-texto-opaco: #8a8a8a;
+
+  /* Bordas */
+  --cor-borda-neutra: rgba(242, 74, 60, 0.3);
+  --cor-borda-scan: rgba(242, 74, 60, 0.8);
+
+  /* Overlays */
+  --cor-overlay-escuro: rgba(15, 11, 14, 0.85);
+  --cor-overlay-scan: rgba(242, 74, 60, 0.15);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* CORPO */
+body {
+  background: radial-gradient(circle, #1a1014 0%, var(--cor-fundo-principal) 70%);
+  height: 100vh;
+  font-family: 'Share Tech Mono', monospace;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--cor-texto-principal);
+}
+
+/* INTRO */
+.tela-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  inset: 0;
+  transition: opacity 0.6s ease;
+  z-index: 10;
+}
+
+.tela-loading.sair {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.painel-loading {
+  border: 1px solid var(--cor-scan-principal);
+  padding: 30px 40px;
+  min-width: 380px;
+  box-shadow: 0 0 25px rgba(242, 74, 60, 0.4);
+  background-color: rgba(15, 11, 14, 0.85);
+}
+
+.titulo {
+  color: var(--cor-scan-principal);
+  text-align: center;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+  font-size: 1.5em;
+}
+
+.subtitulo {
+  font-size: 1em;
+  text-align: center;
+  margin-bottom: 20px;
+  opacity: 0.8;
+}
+
+.barra-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.barra-texto {
+  color: var(--cor-scan-principal);
+}
+
+.barra-progresso {
+  flex: 1;
+  height: 14px;
+  border: 1px solid var(--cor-scan-principal);
+  padding: 2px;
+}
+
+.barra-preenchimento {
+  height: 100%;
+  width: 0%;
+  background-color: var(--cor-scan-principal);
+  box-shadow: 0 0 8px var(--cor-scan-principal);
+  transition: width 0.2s linear;
+}
+
+.status {
+  margin-top: 12px;
+  font-size: 1em;
+  text-align: right;
+}
+
+.img-bg{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.site-principal {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.8s ease;
+  height: 100vh;
+  background-color: var(--cor-fundo-principal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.site-principal.ativo {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* FORMATAÇÃO SCANNER */
+
+#scanner{
+  position: fixed;
+  inset: 0;
+  background: var(--cor-overlay-scan);
+  display: none;
+  margin: 2px;
+  z-index: 9999;
+  font-family: 'Share Tech Mono', monospace;
+
+  opacity: 0;
+  transform: scale(0.98);
+}
+
+/* SCANNER ATIVO*/
+#scanner.ativo{
+  display: block;
+  animation: scannerEntrada .5s ease-in-out forwards;
+}
+
+@keyframes scannerEntrada {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+/* FRAME */
+.scanner-frame {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  border: 2px solid var(--cor-scan-secundario);
+  padding: 20px;
+  color: var(--cor-scan-principal);
+}
+
+
+
+/* TEXTOS */
+.scanner-titulo{
+  letter-spacing: 3px;
+  font-size: 24px;
+}
+
+.scanner-status{
+  font-size: 12px;
+  opacity: .7;
+}
+
+
+

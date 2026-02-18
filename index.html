@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <title>System Rebooting</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- TELA LOADING -->
+  <div class="tela-loading" id="loading">
+
+    <div class="painel-loading">
+      <p class="titulo">&lt; INICIALIZANDO SISTEMA &gt;</p>
+      <p class="subtitulo">HYDRA VER 3.1 SYS RECOVERY</p>
+
+      <div class="barra-container">
+        <span class="barra-texto">[</span>
+        <div class="barra-progresso">
+          <div class="barra-preenchimento"></div>
+        </div>
+        <span class="barra-texto">]</span>
+      </div>
+
+      <p class="status">PROCESS: <span id="porcentagem">0%</span></p>
+    </div>
+  </div>
+
+
+  <!-- CORPO PRINCIPAL -->
+
+  <main class="site-principal" id="site">
+    
+    <div class="img-bg">
+        <img src="imgs/fundo.jpeg" alt="">
+    </div>
+
+
+    <!-- OVERLAY SCANNER INTERFACE -->
+
+    <div id="scanner">
+      <div class="scanner-frame">
+        <p class="scanner-titulo"> SCANNER INTERFACE</p>
+        <p class="scanner-status">ANALISANDO</p>
+      </div>
+    </div>
+
+    <audio id="scannerOn" src="sons/cp2077_scanner.mp3" preload="auto"></audio>
+    <script src="scanner.js"></script>
+    
+
+    
+
+  </main>
+
+  <script src="script.js"></script>
+
+
+
+</body>
+</html>
