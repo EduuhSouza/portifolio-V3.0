@@ -32,7 +32,7 @@ A proposta é criar uma experiência que vá além de um site estático, funcion
 ### Versão Inicial
 - **HTML5**
 - **CSS3**
-- **JavaScript (Vanilla)**
+- **JavaScript**
 
 ### Evolução do Projeto
 - Estou aprendendo sobre o Vue.js e no futuro pretendo fazer o projeto usando esta tecnologia
