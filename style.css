@@ -111,17 +111,36 @@ body {
   text-align: right;
 }
 
-.img-bg{
-  display: flex;
-  justify-content: center;
+/* FORMATAÇÃO FUNDO */
+
+.cena-fundo{
+  position: relative;
   width: 100%;
-  height: 100%;
+  height: 100vh;
+  overflow: hidden;
 }
+
+.background{
+  background-image: url(imgs/fundo.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+
+
+
+/* FORMATAÇÃO CONTEUDO CORPO PRINCIPAL */
 
 .site-principal {
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.8s ease;
+  /* width: 100%; */
   height: 100vh;
   background-color: var(--cor-fundo-principal);
   display: flex;
@@ -130,6 +149,7 @@ body {
 }
 
 .site-principal.ativo {
+  width: 100%;
   opacity: 1;
   visibility: visible;
 }
@@ -186,6 +206,64 @@ body {
   font-size: 12px;
   opacity: .7;
 }
+
+
+/* HUD TUTORIAL*/
+
+.hud-tutorial {
+  position: fixed;
+  top: 24px;
+  right: 24px;
+  z-index: 9000;
+  background: rgba(15, 11, 14, 0.75);
+  backdrop-filter: blur(6px);
+  border: 1px solid var(--cor-borda-scan);
+  border-left: 3px solid var(--cor-scan-principal);
+  padding: 16px 20px;
+  min-width: 260px;
+  box-shadow: 
+    0 0 15px rgba(242, 74, 60, 0.25),
+    inset 0 0 12px rgba(242, 74, 60, 0.1);
+}
+
+/* TÍTULO */
+
+.hud-titulo {
+  color: var(--cor-scan-principal);
+  font-size: 14px;
+  letter-spacing: 3px;
+  margin-bottom: 12px;
+}
+
+/* CONTROLES */
+
+.hud-controles {
+  color: var(--cor-texto-principal);
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+.hud-controles p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+/* TECLAS */
+
+.hud-controles span {
+  color: var(--cor-info-ativa);
+  border: 1px solid var(--cor-info-ativa);
+  padding: 2px 8px;
+  font-size: 12px;
+  letter-spacing: 2px;
+  min-width: 50px;
+  text-align: center;
+  box-shadow: 0 0 8px rgba(92, 242, 242, 0.4);
+}
+
+
 
 
 
