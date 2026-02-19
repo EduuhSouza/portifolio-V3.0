@@ -113,23 +113,24 @@ body {
 
 /* FORMATAÇÃO FUNDO */
 
-.cena-fundo{
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-}
-
-.background{
-  background-image: url(imgs/fundo.jpeg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  position: absolute;
+.cena-fundo {
+  position: fixed;
   inset: 0;
+  overflow: hidden;
   z-index: 1;
 }
+
+.background {
+  position: absolute;
+  inset: -60px; /* espaço extra pra mover */
+  background-image: url(imgs/fundo.jpeg);
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+  will-change: transform;
+}
+
+
 
 
 
